@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devin Front End</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Grey+Qo&family=Gupter:wght@400;500;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="layout.css" />
+    <link rel="stylesheet" href="reset.css" />
+  </head>
+  <body>
+    <header class="banner">
+      <div class="container row">
+        <nav class="navbar column-full">
+          <span class="page-title">Webpage of Ice and Fire</span>
+          <a href="#" class="nav-item open-search-modal">search</a>
+          <dialog class="search-dialog">
+            <p>Search</p>
+            <input type="text" class="search-bar" placeholder="Search for..." />
+            <a href="#" class="search-button">Search</a>
+            <p>Recent Searches</p>
+            <ul class="search-history"></ul>
+            <a href="#" class="clear-history">Clear History</a>
+            <a href="#" class="close-modal"></a>
+          </dialog>
+          <a href="#" class="nav-item" data-view="characters">characters</a>
+          <a href="#" class="nav-item" data-view="books">books</a>
+          <a href="#" class="nav-item" data-view="houses">houses</a>
+          <a href="#" class="nav-item" data-view="home-page"
+            ><img class="nav-house" src="barathSigil-removebg-preview.png"
+          /></a>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <div data-view="home-page">
+        <div class="column-full">
+          <h1 class="homeHeader">Home</h1>
+        </div>
+        <div class="row home-icons">
+          <div class="column-third">
+            <a href="#" target="_blank" class="home-nav home-char"
+              ><img class="home-char" src="Nothing.webp" />
+              <p class="homeCharText">characters</p>
+            </a>
+          </div>
+          <div class="column-third">
+            <a href="#" target="_blank" class="home-nav"
+              ><img class="home-book" src="clashBook.png" />
+              <p class="homeBooksText">books</p>
+            </a>
+          </div>
+          <div class="column-third">
+            <a href="#" target="_blank" class="home-nav"
+              ><img class="home-sigil" src="stark2-removebg-preview.png" />
+              <p class="homeHouseText">houses</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div data-view="characters" class="hidden">
+        <form id="character-form">
+          <div class="characters-page column-full">
+            <h1>Characters</h1>
+            <label for="character-search">Search Character:</label>
+            <input
+              type="text"
+              id="character-search"
+              placeholder="Search by character name" />
+            <button type="button" id="search-button">Search</button>
+            <a href="#" data-view="profile-creator" class="nav-item nav-button"
+              >New Profile</a
+            >
+            <p class="no-profiles">There are no available profiles</p>
+            <ul class="profile-list"></ul>
+          </div>
+        </form>
+      </div>
+      <div data-view="books" class="hidden">
+        <div class="books-page column-full">
+          <h1>Books</h1>
+          <a href="#" data-view="profile-creator" class="nav-item nav-button"
+            >New Profile</a
+          >
+          <dialog class="no-profiles">
+            <p><strong>There are no available profiles</strong></p>
+            <div class="home-modal">
+              <button class="return-home">Return Home</button>
+            </div>
+          </dialog>
+          <ul class="profile-list"></ul>
+        </div>
+      </div>
+      <div data-view="houses" class="hidden">
+        <div class="houses-page column-full">
+          <h1>Houses</h1>
+          <a href="#" data-view="profile-creator" class="nav-item nav-button"
+            >New Profile</a
+          >
+          <dialog class="no-profiles">
+            <p><strong>There are no available profiles</strong></p>
+            <div class="home-modal">
+              <button class="return-home">Return Home</button>
+            </div>
+          </dialog>
+          <ul class="profile-list"></ul>
+        </div>
+      </div>
+    </main>
+    <script src="main.js"></script>
+    <script src="data.js"></script>
+  </body>
+</html>

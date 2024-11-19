@@ -1,0 +1,84 @@
+body {
+  color: black;
+  font-family: Cinzel, sans-serif;
+}
+
+header {
+  background-color: #a3710f;
+  color: #000;
+  height: 50px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* nav > span {
+  margin-right: 19rem;
+  padding: 0.8rem 0;
+  justify-content: flex-end;
+  display: inline-block;
+} */
+
+nav {
+  display: flex;
+  justify-content: flex-end; /* Align items (anchors) to the right */
+  align-items: center; /* Vertically center the nav items */
+  width: 100%; /* takes full width */
+  margin-top: 10px;
+}
+
+.page-title {
+  margin-right: auto; /* Push the page title to the left */
+}
+
+nav a {
+  margin-left: 0.9rem; /* Adds space between the nav links */
+  color: #fff;
+  text-decoration: none;
+}
+
+.home-char {
+  border-radius: 25px;
+  height: 200px;
+}
+
+.home-book {
+  height: 200px;
+}
+
+.home-sigil {
+  height: 230px;
+  padding-bottom: 30px;
+}
+
+.homeHouseText {
+  position: relative;
+  bottom: 29px;
+  left: 50px;
+}
+
+.homeBooksText {
+  position: relative;
+  left: 80px;
+  top: 1.5px;
+}
+
+.homeCharText {
+  position: relative;
+  left: 40px;
+  top: 1px;
+}
+
+.home-icons {
+  margin-left: 96px;
+  margin-top: 100px;
+  max-width: 100%;
+}
+
+.nav-house {
+  height: 15%;
+  width: 10%;
+  position: relative;
+  top: 2px;
+}

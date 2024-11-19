@@ -1,0 +1,54 @@
+.hidden {
+  display: none !important;
+}
+
+.hide {
+  visibility: hidden !important;
+}
+
+.container {
+  max-width: 1400px;
+  padding: 0 1.5rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column-third {
+  flex-basis: calc(100% / 3);
+}
+
+.column-full,
+.column-half {
+  padding: 0 0.75rem;
+}
+
+@media screen and (width >= 768px) {
+  .container {
+    max-width: 95%;
+  }
+}
+
+.column-half {
+  width: 50%;
+}
+
+.column-full {
+  width: 100%;
+}
+
+@media screen and (width >= 1400px) {
+  .container {
+    max-width: 1400px; /* Ensure that the container doesn't exceed this width */
+  }
+}
+
+@media screen and (width >= 1200px) and (width <= 1399px) {
+  .container {
+    max-width: 1200px; /* For screens between 1200px and 1399px, use a smaller max-width */
+  }
+}
